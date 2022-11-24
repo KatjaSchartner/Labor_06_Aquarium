@@ -1,13 +1,19 @@
-
+import java.util.ArrayList;
+import java.util.Random;
 
 public class FischMain {
     public static void main(String[] args)
             throws InterruptedException {
         Aquarium aq = new Aquarium(400, 400);
-        aq.addFisch(new Rotfisch(100, 300));
-        aq.addFisch(new Gelbfisch(200, 200));
-        aq.addFisch(new Blaufisch(300, 100));
-        aq.addFisch(new SlowFisch(100, 100));
+        Random r = new Random();
+        for (int i = 0; i < 10; i++) {
+
+            aq.addFisch(new Rotfisch(r.nextInt(400), r.nextInt(400)));
+            aq.addFisch(new Gelbfisch(r.nextInt(400), r.nextInt(400)));
+            aq.addFisch(new Blaufisch(r.nextInt(400), r.nextInt(400)));
+            aq.addFisch(new SlowFisch(r.nextInt(400), r.nextInt(400)));
+        }
+
 
         while (true) {
             aq.bewege();
@@ -15,4 +21,5 @@ public class FischMain {
             Thread.sleep(30);
         }
     }
+
 }

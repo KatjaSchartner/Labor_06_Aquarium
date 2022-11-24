@@ -11,7 +11,12 @@ public class Blaufisch extends AbstractFisch{
         posX -= 1;
     }
     public void zeichne(EasyCanvas ec) {
+
+
         ec.setColor(Color.BLUE);
-        ec.drawRect(posX,posY, 5,5 );
+
+        ec.fillPolygon(posX-5,posY+5, posX-5, posY-5, posX-15, posY);
+        ec.setColor(Color.WHITE);
+        ec.fillCircle(posX-6,posY,1);
     }
 }

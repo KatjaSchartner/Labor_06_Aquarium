@@ -9,6 +9,7 @@ public class Gelbfisch extends AbstractFisch{
 
     public void zeichne(EasyCanvas ec) {
         ec.setColor(Color.YELLOW);
-        ec.drawRect(posX,posY, 5,5 );
+        ec.fillPolygon(posX-5,posY+5, posX+5, posY, posX-5, posY-5);
+
     }
 }

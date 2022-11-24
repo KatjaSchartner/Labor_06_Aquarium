@@ -38,6 +38,6 @@ public class SlowFisch implements IFisch {
     @Override
    public void zeichne(EasyCanvas ec){
         ec.setColor(Color.CYAN);
-        ec.drawRect(this.getPosX(), this.getPosY(),6,6);
+        ec.fillPolygon((int)posX-4,(int)posY+4,(int) posX+4, (int)posY, (int)posX-4, (int)posY-4);
     }
 }
